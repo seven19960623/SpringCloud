@@ -1,0 +1,29 @@
+spring:
+  #开启事务
+  transaction:
+    rollback-on-commit-failure: true
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://124.71.46.105:3306/one_stand?useUnicode=true&serverTimezone=GMT%2B8&characterEncoding=utf8&useSSL=false
+      username: root
+      password: 123456
+      max-active: 20
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1
+      test-on-borrow: true
+  pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+#mybaits 整合配置
+mybatis:
+  mapper-locations:
+  - mapping/*Mapper.xml
+  type-aliases-package: one.stand.model
