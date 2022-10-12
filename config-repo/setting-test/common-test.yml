@@ -127,7 +127,7 @@ sms:
   accessKeySecret: P2eKqqBXvtoLGOHgViMeqwiCArgtZp
   loginVerifyKey: SMS_254316113
   outId: outId
-  signName: 小圈子 #蚂蚁帮
+  signName: 小圈子
 
 #名片海报路径
 card:
