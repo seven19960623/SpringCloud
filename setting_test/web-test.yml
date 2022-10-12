@@ -1,0 +1,20 @@
+spring:
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: true
+swagger:
+  enable: true
+#打开容错
+feign:
+  hystrix:
+    enabled: false
+  httpclient:
+    enabled: true
+    connection-timeout: 100000
+  client:
+    config:
+      default:
+        connectTimeout: 100000
+        readTimeout: 600000
+        loggerLevel: full
